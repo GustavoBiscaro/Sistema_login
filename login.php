@@ -20,8 +20,10 @@ if($row == 1) {
     $_SESSION['usuario'] = $usuario;
     header('Location: painel.php');
     exit();
-} else {
+} else { 
+     $_SESSION['nao_autenticado'] = true;
     header('Location: index.php');
+  
     exit();
 }
 
